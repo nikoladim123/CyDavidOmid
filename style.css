@@ -1,0 +1,99 @@
+body{
+  margin: 0;
+}
+
+header{
+  position: relative;
+  overflow: hidden;
+  background-image: url('img/Background.jpg');
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.logoAndTextBox{
+  margin-top: 2.5vh;
+  width: 11.48vw;
+  /* height: 5.25vw; */
+  margin-left: 6.074vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoPng{
+  background-image: url('img/png/Logo.png');
+  width: 2.59vw;
+  height: 2.59vw;
+  background-size: 100% 100%;
+}
+
+.logoText p{
+  font-size:2.15vw;
+  margin: 0;
+  margin-top: 0.4vw;
+}
+span{
+  color:red;
+}
+
+.firstRedBox{
+  padding-top: 1px;
+  overflow:  visible;
+  margin-left: 6.074vw;
+  background-color: rgb(223,60,79,0.35);
+  width: 25.62vw;
+  height: 32.07vw;
+}
+
+.secundRedBox{
+  background-color: rgb(225,31,76,0.5);
+  width: 18.51vw;
+  height: 23.77vw;
+  margin-left: 3.555vw;
+  margin-top: 4.222vw;
+  padding-top: 0.1px;
+}
+
+.redBoxText{
+  margin-top: 2.44vw;
+  margin-left: 3.259vw;
+}
+
+.redBoxText p:nth-child(1){
+  font-size:1.77vw;
+  margin: 0;
+}
+
+.redBoxText p:nth-child(2),p:nth-child(3){
+  color:white;
+  margin: 0;
+  font-size:4.8vw;
+}
+
+.rightSlider{
+  position: fixed;
+  background-color: rgb(225,31,76,0.75);
+  right: 0px;
+  top:0px;
+  height: 100vh;
+  width: 4.296vw;
+  transition: 2s;
+}
+
+.burgerMenu{
+  position: absolute;
+  width: 2.296vw;
+  margin-top: 20.666vw;
+  left: 1.18vw;
+}
+.burgerMenu:hover{
+  cursor: pointer;
+}
+
+.burgerMenu div{
+  width: 100%;
+  background-color: white;
+  height: 3px;
+  margin-bottom: 0.37vw;
+}
