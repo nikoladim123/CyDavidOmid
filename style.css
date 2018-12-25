@@ -44,6 +44,7 @@ span{
   background-color: rgb(223,60,79,0.35);
   width: 25.62vw;
   height: 32.07vw;
+
 }
 
 .secundRedBox{
@@ -74,7 +75,7 @@ span{
 .rightSlider{
   z-index: 1;
   position: fixed;
-  background-color: rgb(225,31,76,0.75);
+  background-color: rgb(225,31,76,0.31);
   right: 0px;
   top:0px;
   height: 100vh;
@@ -87,16 +88,28 @@ span{
   width: 2.296vw;
   margin-top: 20.666vw;
   left: 1.18vw;
+  height: 2vw;
 }
 .burgerMenu:hover{
   cursor: pointer;
 }
 
 .burgerMenu div{
+  position: absolute;
   width: 100%;
   background-color: white;
   height: 3px;
   margin-bottom: 0.37vw;
+  transition: 2s;
+}
+.burgerMenu div:nth-child(1){
+  margin-top: 0;
+}
+.burgerMenu div:nth-child(2){
+  margin-top:calc(3px + 0.37vw);
+}
+.burgerMenu div:nth-child(3){
+  margin-top:calc(6px + 0.74vw);
 }
 /*MAIN SECTION*/
 main{
@@ -105,8 +118,9 @@ main{
 }
 
 .upsideDownText{
-  margin-top: 22vw;
-  position: absolute;
+  z-index: 1;
+  top: 22vw;
+  position: fixed;
 }
 
 .upsideDownText p{
@@ -119,18 +133,62 @@ main{
   background-image: url('img/girlSun.jpg');
   background-size: 100% 100%;
   padding-top: 0.1px;
-  margin-top: 12.74vw;
-  margin-left: 36.666vw;
-  width: 58.07vw;
-  height: 74.074vw;
+  /* margin-top: 12.74vw;
+  margin-left: 36.666vw; */
+  /* width: 58.07vw;
+  height: 74.074vw; */
+  margin-top: 25vw;
+  margin-left: 67.555vw;
+  width: 0vw;
+  height: 0vw;
+  border-radius: 50%;
+  animation-fill-mode: forwards;
+  animation-duration:  2s ;
+}
+
+.girlSunPhotoAnimClass{
+  animation-name:girlSunPhoto;
+}
+@keyframes girlSunPhoto{
+  0%{
+    width: 0vw;
+    height: 0vw;
+    border-radius: 50%;
+  }
+  50%{
+    border-radius: 50%;
+  }
+  100%{
+    margin-left: 36.666vw;
+    margin-top:12.74vw;
+    width: 58.07vw;
+    height: 74.074vw;
+    border-radius: 0;
+  }
 }
 
 .aboutMeBox{
+  overflow:   hidden;
   position: relative;
-  width: 46.666vw;
+  /* width: 46.666vw;
+  height: 20.74vw; */
+  width: 0vw;
   height: 20.74vw;
   margin-top: 13.03vw;
   margin-left: -25.33vw;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 1.5s;
+}
+.aboutMeBoxAnimClass{
+  animation-name: aboutMeBox;
+}
+@keyframes aboutMeBox {
+  0%{
+  }
+  100%{
+    width: 46.666vw;
+  }
 }
 
 .aboutMeBox p{
@@ -155,7 +213,7 @@ main{
 }
 
 .loremIpsumTextBox{
-  overflow: auto;
+  overflow: hidden;
   width: 25.259vw;
   height: 31.11vw;
   margin-top: 8.148vw;
