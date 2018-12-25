@@ -13,13 +13,14 @@ header{
 }
 
 .doubleOverlay{
+  display: block;
   width: 100%;
   height: 100%;
   position: fixed;
   z-index: 3;
   background-color: gray;
   opacity: 1;
-  animation-duration: 2s;
+  animation-duration: 2.5s;
   animation-fill-mode: forwards;
   animation-name: doubleOverlay;
 }
@@ -134,9 +135,10 @@ span{
 }
 
 .rightSlider{
-  z-index: 1;
+  z-index: 4;
   position: fixed;
-  background-color: rgb(225,31,76,0.9);
+  /* background-color: rgb(225,31,76,0.9); */
+  background-color: rgb(0,0,0,0.2);
   right: 0px;
   top:0px;
   height: 100vh;

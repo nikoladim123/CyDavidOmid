@@ -9,6 +9,12 @@ var aboutMeBox = document.getElementsByClassName('aboutMeBox')[0];
 var picOne = document.getElementsByClassName('picOne')[0];
 var picTwo = document.getElementsByClassName('picTwo')[0];
 var picThree = document.getElementsByClassName('picThree')[0];
+//doubleOverlay
+var doubleOverlay = document.getElementsByClassName('doubleOverlay')[0];
+window.onload = setTimeout(function(){
+  doubleOverlay.style.display ='none';
+  console.log('i run');
+},2000);
 //carousel slideshow logic
 var swchCarousel = 0;
 setInterval(function(){
