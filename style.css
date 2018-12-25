@@ -5,10 +5,50 @@ body{
 header{
   position: relative;
   overflow: hidden;
-  background-image: url('img/Background.jpg');
+  /* background-image: url('img/Background.jpg'); */
   min-height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
+}
+
+.CarouselDiv{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.picOne{
+    position: absolute;
+    background-image: url('img/Background.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    /* left: 0%; */
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    transition: 1s;
+}
+.picTwo{
+    position: absolute;
+    background-image: url('img/BackgroundTwo.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    /* left: 0%; */
+    width: 0%;
+    height: 100%;
+    left: 0%;
+    transition: 1s;
+}
+.picThree{
+    transition: 1s;
+    position: absolute;
+    background-image: url('img/BackgroundThree.jpg');
+    background-repeat: no-repeat;
+    background-size:  cover;
+    /* left: 0%; */
+    width: 0%;
+    left: 0%;
+    height: 100%;
 }
 
 .logoAndTextBox{
@@ -131,48 +171,33 @@ main{
 
 .girlSunPhoto{
   background-image: url('img/girlSun.jpg');
-  background-size: 100% 100%;
+  background-size: cover;
   padding-top: 0.1px;
-  /* margin-top: 12.74vw;
-  margin-left: 36.666vw; */
-  /* width: 58.07vw;
-  height: 74.074vw; */
-  margin-top: 25vw;
-  margin-left: 67.555vw;
-  width: 0vw;
+  margin-top: 12.74vw;
+  margin-left: 36.666vw;
+  width: 58.07vw;
+  /* height: 74.074vw; */
   height: 0vw;
-  border-radius: 50%;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
-  animation-duration:  2s ;
 }
-
-.girlSunPhotoAnimClass{
-  animation-name:girlSunPhoto;
+.girlSunPhotoAnim{
+  animation-name: girlSunPhoto;
 }
 @keyframes girlSunPhoto{
   0%{
-    width: 0vw;
     height: 0vw;
-    border-radius: 50%;
-  }
-  50%{
-    border-radius: 50%;
   }
   100%{
-    margin-left: 36.666vw;
-    margin-top:12.74vw;
-    width: 58.07vw;
     height: 74.074vw;
-    border-radius: 0;
   }
 }
 
 .aboutMeBox{
   overflow:   hidden;
   position: relative;
-  /* width: 46.666vw;
-  height: 20.74vw; */
-  width: 0vw;
+  /* width: 46.666vw; */
+  width: 0;
   height: 20.74vw;
   margin-top: 13.03vw;
   margin-left: -25.33vw;
@@ -180,11 +205,12 @@ main{
   animation-fill-mode: forwards;
   animation-delay: 1.5s;
 }
-.aboutMeBoxAnimClass{
+.aboutMeBoxAnim{
   animation-name: aboutMeBox;
 }
 @keyframes aboutMeBox {
   0%{
+
   }
   100%{
     width: 46.666vw;

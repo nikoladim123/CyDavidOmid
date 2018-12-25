@@ -5,8 +5,46 @@ var burgerTwo = document.getElementsByClassName('burgerOne')[1];
 var burgerThree = document.getElementsByClassName('burgerOne')[2];
 var girlSunPhoto = document.getElementsByClassName('girlSunPhoto')[0];
 var aboutMeBox = document.getElementsByClassName('aboutMeBox')[0];
+//slideshow divs
+var picOne = document.getElementsByClassName('picOne')[0];
+var picTwo = document.getElementsByClassName('picTwo')[0];
+var picThree = document.getElementsByClassName('picThree')[0];
+//carousel slideshow logic
+var swchCarousel = 0;
+setInterval(function(){
+  console.log(swchCarousel%3)
+  if(swchCarousel%3 === 0){
+    picTwo.style.width = '100%';
+    picOne.style.width = '0%';
+    picThree.style.width = '0%';
+    picOne.style.left = '100%';
+    setTimeout(function(){
+      picOne.style.left = '0%';
+    },1000)
+  }
+  else if(swchCarousel%3 === 1){
+    picThree.style.width = '100%';
+    picOne.style.width = '0%';
+    picTwo.style.width = '0%';
+    picTwo.style.left = '100%';
+    setTimeout(function(){
+      picTwo.style.left = '0%';
+    },1000)
+  }
+  else if(swchCarousel%3 === 2){
+    picOne.style.width = '100%';
+    picTwo.style.width = '0%';
+    picThree.style.width = '0%';
+    picThree.style.left = '100%';
+    setTimeout(function(){
+      picThree.style.left = '0%';
+    },1000)
+  }
+  swchCarousel++;
+},5000);
 
 
+//burger/slider logic
 var swch =0;
 burgerMenu.addEventListener('click',function(){
   swch++;
@@ -33,10 +71,10 @@ burgerMenu.addEventListener('click',function(){
 var i=0;
 window.addEventListener("scroll", function(evt){
   if((window.innerHeight /100)* 150  < window.scrollY + window.innerHeight && i!==1){
-    i=0;
+    i=1;
     console.log(window.scrollY + window.innerHeight);
     console.log(window.scrollY);
-    girlSunPhoto.className += ' girlSunPhotoAnimClass';
-    aboutMeBox.className += ' aboutMeBoxAnimClass';
+    girlSunPhoto.className += " girlSunPhotoAnim";
+    aboutMeBox.className += " aboutMeBoxAnim";
   }
 });
