@@ -197,6 +197,7 @@ span{
 }
 
 .photoGrapherBox p:nth-child(2),p:nth-child(3){
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
   color:white;
   margin: 0;
   font-size:4.8vw;
