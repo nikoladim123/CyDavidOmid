@@ -16,39 +16,61 @@ window.onload = setTimeout(function(){
   console.log('i run');
 },2000);
 //carousel slideshow logic
+// var swchCarousel = 0;
+// setInterval(function(){
+//   console.log(swchCarousel%3)
+//   if(swchCarousel%3 === 0){
+//     picTwo.style.width = '100%';
+//     picOne.style.width = '0%';
+//     picThree.style.width = '0%';
+//     picOne.style.left = '100%';
+//     setTimeout(function(){
+//       picOne.style.left = '0%';
+//     },1000)
+//   }
+//   else if(swchCarousel%3 === 1){
+//     picThree.style.width = '100%';
+//     picOne.style.width = '0%';
+//     picTwo.style.width = '0%';
+//     picTwo.style.left = '100%';
+//     setTimeout(function(){
+//       picTwo.style.left = '0%';
+//     },1000)
+//   }
+//   else if(swchCarousel%3 === 2){
+//     picOne.style.width = '100%';
+//     picTwo.style.width = '0%';
+//     picThree.style.width = '0%';
+//     picThree.style.left = '100%';
+//     setTimeout(function(){
+//       picThree.style.left = '0%';
+//     },1000)
+//   }
+//   swchCarousel++;
+// },5000);
+/*White flash show*/
 var swchCarousel = 0;
 setInterval(function(){
-  console.log(swchCarousel%3)
   if(swchCarousel%3 === 0){
-    picTwo.style.width = '100%';
-    picOne.style.width = '0%';
-    picThree.style.width = '0%';
-    picOne.style.left = '100%';
-    setTimeout(function(){
-      picOne.style.left = '0%';
-    },1000)
+    picOne.style.display = 'block';
+    picTwo.style.display = 'none';
+    picThree.style.display = 'none';
+    console.log(swchCarousel%3);
   }
   else if(swchCarousel%3 === 1){
-    picThree.style.width = '100%';
-    picOne.style.width = '0%';
-    picTwo.style.width = '0%';
-    picTwo.style.left = '100%';
-    setTimeout(function(){
-      picTwo.style.left = '0%';
-    },1000)
+    picOne.style.display = 'none';
+    picTwo.style.display = 'block';
+    picThree.style.display = 'none';
+    console.log(swchCarousel%3);
   }
   else if(swchCarousel%3 === 2){
-    picOne.style.width = '100%';
-    picTwo.style.width = '0%';
-    picThree.style.width = '0%';
-    picThree.style.left = '100%';
-    setTimeout(function(){
-      picThree.style.left = '0%';
-    },1000)
+    picOne.style.display = 'none';
+    picTwo.style.display = 'none';
+    picThree.style.display = 'block';
+    console.log(swchCarousel%3);
   }
   swchCarousel++;
-},5000);
-
+},5000)
 
 //burger/slider logic
 var swch =0;
