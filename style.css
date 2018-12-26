@@ -106,7 +106,18 @@ span{
   background-color: rgb(223,60,79,0.35);
   width: 25.62vw;
   height: 32.07vw;
+  transform: matrix3d(-0.97,-0.26,0.00,0.001,0.26,0.97,0.00,0.001,0,0,-1,0,0,0,0,1);
+  animation-name: firstRedBox;
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
+}
+@keyframes firstRedBox{
+  0%{
 
+  }
+  100%{
+    transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
+  }
 }
 
 .secundRedBox{
@@ -116,19 +127,37 @@ span{
   margin-left: 3.555vw;
   margin-top: 4.222vw;
   padding-top: 0.1px;
+  transform: matrix3d(-0.97,-0.26,0.00,0.001,0.26,0.97,0.00,0.001,0,0,-1,0,0,0,0,1);
+  animation-name: secundRedBox;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+}
+@keyframes secundRedBox{
+  0%{
+
+  }
+  100%{
+    transform: matrix3d(1,0,0.00,0,0.00,1,0.00,0,0,0,1,0,0,0,0,1);
+  }
 }
 
-.redBoxText{
+.photoGrapherBox{
+  position: absolute;
+  top: 13.629vw;
+  left:12.814vw;
+}
+
+.photoGrapherBox{
   margin-top: 2.44vw;
   margin-left: 3.259vw;
 }
 
-.redBoxText p:nth-child(1){
+.photoGrapherBox p:nth-child(1){
   font-size:1.77vw;
   margin: 0;
 }
 
-.redBoxText p:nth-child(2),p:nth-child(3){
+.photoGrapherBox p:nth-child(2),p:nth-child(3){
   color:white;
   margin: 0;
   font-size:4.8vw;
